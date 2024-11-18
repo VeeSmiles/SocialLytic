@@ -33,6 +33,8 @@ INSERT INTO Posts (post_id, user_id, content) VALUES (7, 106, 'Controversial Tal
 INSERT INTO Analytics (analytics_id, post_id, views, likes, shares) VALUES (3, 3, 150, 40, 38);
 INSERT INTO Analytics (analytics_id, post_id, views, likes, shares) VALUES (5, 5, 385, 78, 50);
 INSERT INTO Analytics (analytics_id, post_id, views, likes, shares) VALUES (7, 7, 890, 697, 89);
+
+
 /*Stored Procedures*/
 DELIMITER //
 CREATE PROCEDURE AddUser (
@@ -65,6 +67,8 @@ BEGIN
 	DELETE FROM Posts WHERE post_id = p_post_id;
 END;
 DELIMITER //
+
+	
 /*Triggers*/
 DELIMITER //
 CREATE TRIGGER AfterPostInsert
